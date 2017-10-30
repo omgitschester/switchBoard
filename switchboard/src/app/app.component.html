@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Switchboard</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Switchboard</h1>
+    <div class="row">
+      <div class="switch_box" *ngFor="let switch of switches; let idx = index">
+
+        <button *ngIf="switch" [ngClass]="{'on': switch}" (click)="on_off(idx)">ON</button>
+
+        <button *ngIf="!switch" [ngClass]="{'on': switch}" (click)="on_off(idx)">OFF</button>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
